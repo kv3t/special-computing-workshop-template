@@ -19,7 +19,7 @@ class wordfrequencyTest {
                         Path.of( "src/test/resources/counts_short.txt")
                 )
         );
-        assertTrue(Files.exists(Path.of("src/test/resources/words/")));
+        assertTrue(Files.exists(Path.of("src/main/resources/words/")));
     }
 
     @Test
@@ -33,7 +33,7 @@ class wordfrequencyTest {
         String[] args = new String[]{"src/test/resources/long_text.txt",
                 "src/test/resources/counts.txt"};
         wordfrequency.main(args);
-        assertTrue(Files.exists(Path.of("src/test/resources/words/")));
+        assertTrue(Files.exists(Path.of("src/main/resources/words/")));
     }
 
 }

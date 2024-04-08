@@ -39,8 +39,8 @@ public class wordfrequency {
             wordsCounter(wordCounts, writer);
             writer.close();
 
-            Files.createDirectories(Paths.get(outputString + "/words"));
-            writingWordsToFileInDir(wordCounts, outputString + "/words/");
+            Files.createDirectories(Paths.get("src/main/resources/words"));
+            writingWordsToFileInDir(wordCounts,  "src/main/resources/words/");
         }
         catch (IOException e) {
             throw new IllegalArgumentException(e.getMessage());
