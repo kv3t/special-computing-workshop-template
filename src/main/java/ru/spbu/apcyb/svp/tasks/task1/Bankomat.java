@@ -4,8 +4,8 @@ import java.util.*;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-public class bankomat {
-    private static final Logger logger = Logger.getLogger(bankomat.class.getName());
+public class Bankomat {
+    private static final Logger logger = Logger.getLogger(Bankomat.class.getName());
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -29,7 +29,8 @@ public class bankomat {
         long[] coins = new long[splitString.length];
 
         for (int i = 0; i < coins.length; i++) {
-            coins[i] = Long.parseLong(splitString[i]);
+            try{ coins[i] = Long.parseLong(splitString[i]);}
+            catch (NumberFormatException e){ throw new NumberFormatException("Ошибка при парсинге номинала " + i + ": " + e.getMessage());}
             if (coins[i] <= 0) {
                 throw new NumberFormatException("Номиналы введены некорректно");
             }
@@ -40,9 +41,16 @@ public class bankomat {
         return coins;
     }
 
-    public static List<List<Long>> coinChange(String stringAmount, String stringCoins) {
+    public static List<List<Long>> coinChange(String stringAmount, String stringCoins){
 
-        long amount = Long.parseLong(stringAmount);
+        long amount;
+        try {
+            amount = Long.parseLong(stringAmount);
+        }
+        catch (NumberFormatException e){
+            throw new NumberFormatException("Ошибка при парсинге суммы: " + e.getMessage());
+        }
+
         if (amount <= 0) {
             throw new NumberFormatException("Сумма введена некорректно");
         }
@@ -61,6 +69,7 @@ public class bankomat {
 
         coinChangeHelper(amount, maxdenomination, denominations, currcomb, resultcomb);
         return resultcomb;
+
     }
 
     private static void coinChangeHelper(long amount, long maxcoin, List<Long> coins, List<Long> currentcomb, List<List<Long>> result) {
