@@ -14,8 +14,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.logging.Logger;
 
-public class wordfrequency {
-    private static final Logger logger = Logger.getLogger(wordfrequency.class.getName());
+public class Wordfrequency {
+    private static final Logger logger = Logger.getLogger(Wordfrequency.class.getName());
     public static void main(String[] args) {
 
         if (args.length != 2) {
