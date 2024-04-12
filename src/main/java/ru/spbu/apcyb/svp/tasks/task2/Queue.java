@@ -2,14 +2,13 @@ package ru.spbu.apcyb.svp.tasks.task2;
 
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.Queue;
 
-public class queue implements Queue<Object> {
+public class Queue implements java.util.Queue<Object> {
 
-    private final linkedlist lqueue;
+    private final Linkedlist lqueue;
 
-    public queue() {
-        this.lqueue = new linkedlist();
+    public Queue() {
+        this.lqueue = new Linkedlist();
     }
 
     @Override

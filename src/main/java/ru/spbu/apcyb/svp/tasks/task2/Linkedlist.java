@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-public class linkedlist implements List<Object> {
+public class Linkedlist implements List<Object> {
 
     private static class Node{
         Object value;

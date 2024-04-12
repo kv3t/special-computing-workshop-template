@@ -6,9 +6,9 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
-class queueTest {
+class QueueTest {
 
-    queue q = new queue();
+    Queue q = new Queue();
 
     @Test
     void isEmptyTest() {

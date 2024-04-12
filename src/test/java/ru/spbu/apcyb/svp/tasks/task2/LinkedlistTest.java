@@ -8,9 +8,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-public class linkedlistTest {
+public class LinkedlistTest {
 
-    linkedlist list = new linkedlist();
+    Linkedlist list = new Linkedlist();
 
     @Test
     void isEmptyTest() {
