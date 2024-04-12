@@ -9,8 +9,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
-public class multithread {
-    private static final Logger logger = Logger.getLogger(multithread.class.getName());
+public class Multithread {
+    private static final Logger logger = Logger.getLogger(Multithread.class.getName());
     public static void main(String[] args) throws IOException {
 
         String inputFilePath = "src/main/resources/input.txt";

@@ -4,11 +4,11 @@ import java.io.IOException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static ru.spbu.apcyb.svp.tasks.task4.multithread.calculateAndWriteTangentsSinglethreaded;
-import static ru.spbu.apcyb.svp.tasks.task4.multithread.calculateAndWriteTangentsMultithreaded;
-import static ru.spbu.apcyb.svp.tasks.task4.multithread.generateNumbersFile;
+import static ru.spbu.apcyb.svp.tasks.task4.Multithread.calculateAndWriteTangentsSinglethreaded;
+import static ru.spbu.apcyb.svp.tasks.task4.Multithread.calculateAndWriteTangentsMultithreaded;
+import static ru.spbu.apcyb.svp.tasks.task4.Multithread.generateNumbersFile;
 
-class multithreadTest {
+class MultithreadTest {
     @Test
     void oneNum() throws IOException{
         String sNum = "src/test/resources/input.txt";
