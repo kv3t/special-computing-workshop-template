@@ -13,8 +13,8 @@ import java.util.logging.Logger;
 // javac task3.java
 // java task3 /путь/к/директории /путь/к/целевому/файлу
 
-public class task3 {
-    private static final Logger logger = Logger.getLogger(task3.class.getName());
+public class Task3 {
+    private static final Logger logger = Logger.getLogger(Task3.class.getName());
     public static void main(String[] args) throws IOException{
 
         if (args.length != 2) {

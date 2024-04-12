@@ -10,22 +10,22 @@ import java.nio.file.FileSystemException;
 import java.nio.file.Path;
 import org.junit.jupiter.api.Test;
 
-class task3Test {
+class Task3Test {
 
     @Test
     void incorrectAmountOfArgumentsExceptionTest() {
         String[] args = {"..//"};
-        assertThrows(IllegalArgumentException.class, () -> task3.main(args));
+        assertThrows(IllegalArgumentException.class, () -> Task3.main(args));
     }
     @Test
     void FileNotFoundExceptionTest() {
         String[] args = {"non-existent directory/", "src/test/resources/task3ans.txt"};
-        assertThrows(FileNotFoundException.class, () -> task3.main(args));
+        assertThrows(FileNotFoundException.class, () -> Task3.main(args));
     }
     @Test
     void FileSystemExceptionTest() {
         String[] args = {"..//", "..//"};
-        assertThrows(FileSystemException.class, () -> task3.main(args));
+        assertThrows(FileSystemException.class, () -> Task3.main(args));
     }
 
     @Test
@@ -33,7 +33,7 @@ class task3Test {
         String pathToDirectory = "src/test/resources/task3foldersandfiles/";
         Path currentFile = Path.of("src/test/resources/task3curr.txt");
         String[] args = {pathToDirectory, currentFile.toString()};
-        task3.main(args);
+        Task3.main(args);
         boolean equals = true;
 
         try (BufferedReader currentReader = new BufferedReader(new FileReader(
